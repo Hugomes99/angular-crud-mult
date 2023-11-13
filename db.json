@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "empregados": [
+    {
+      "primeiroNome": "",
+      "sobrenome": "",
+      "email": "",
+      "genero": "",
+      "escolaridade": "",
+      "formacao": "",
+      "id": 1
+    },
+    {
+      "primeiroNome": "Hugo",
+      "sobrenome": "Gomes",
+      "email": "hugo@email.com",
+      "genero": "homem",
+      "escolaridade": "Superior incompleto",
+      "formacao": "TI",
+      "id": 2
+    }
+  ]
+}
