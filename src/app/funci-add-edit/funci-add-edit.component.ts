@@ -28,7 +28,7 @@ export class FunciAddEditComponent {
       primeiroNome: '',
       sobrenome: '',
       email: '',
-      //nascimento: '',
+      nascimento: '',
       genero: '',
       escolaridade: '',
       formacao: '',

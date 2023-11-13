@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     'sobrenome',
     'email',
     'genero',
-    //'nascimento',
+    'nascimento',
     'escolaridade',
     'formacao',
     'action',
