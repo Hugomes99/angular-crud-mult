@@ -1,60 +1,66 @@
 <div mat-dialog-title>
   <h1>Formulário de Funcionário</h1>
 </div>
-
-<div mat-dialog-content class="content">
-  <div class="row">
-    <mat-form-field appearance="outline">
-      <mat-label>Primeiro nome</mat-label>
-      <input matInput type="text" placeholder="Ex. Fulano">
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Segundo nome</mat-label>
-      <input matInput type="text" placeholder="Ex. Ciclano">
-    </mat-form-field>
-  </div>
-
-  <div class="row">
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input matInput type="email" placeholder="Ex.texto@email.com">
-    </mat-form-field>
-    <!--
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
       <mat-form-field appearance="outline">
-      <mat-label>Data de Nascimento/mat-label>
-      <input matInput [matDatepicker]="picker">
-      <mat-hint>MM/DD/YYYY</mat-hint>
-      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  -->
+        <mat-label>Primeiro nome</mat-label>
+        <input matInput type="text" placeholder="Ex. Fulano" formControlName="primeiroNome">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput type="text" placeholder="Ex. Ciclano" formControlName="sobrenome">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Ex.texto@email.com" formControlName="email">
+      </mat-form-field>
+      <!--
+      <mat-form-field appearance="outline">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="nascimento">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+-->
+    </div>
+
+    <div class="row">
+      <mat-radio-group aria-label="Selecione uma opção" formControlName="genero">
+        <mat-label><b>Gênero</b></mat-label>
+        <mat-radio-button value="homem">Masculino</mat-radio-button>
+        <mat-radio-button value="mulher">Feminino</mat-radio-button>
+        <mat-radio-button value="outros">Outros</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Escolaridade</mat-label>
+        <mat-select formControlName="escolaridade">
+          <mat-option *ngFor="let val of escolaridade" [value]="val">{{val}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Formação</mat-label>
+        <input matInput placeholder="Ex. T.I" formControlName="formacao">
+      </mat-form-field>
+
+    </div>
+
   </div>
 
-  <div class="row">
-    <mat-radio-group aria-label="Selecione uma opção">
-      <mat-label><b>Gênero</b></mat-label>
-      <mat-radio-button value="homem">Masculino</mat-radio-button>
-      <mat-radio-button value="mulher">Feminino</mat-radio-button>
-      <mat-radio-button value="outros">Outros</mat-radio-button>
-    </mat-radio-group>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button>Cancelar</button>
+    <button mat-raised-button color="primary" type="submit">Salvar</button>
+
   </div>
-
-  <div class="row">
-    <mat-form-field appearance="outline">
-      <mat-label>Escolaridade</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let val of escolaridade" [value]="val">{{val}}
-
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-
-</div>
-
-<div mat-dialog-actions>
-  <button mat-raised-button>Cancelar</button>
-  <button mat-raised-button color="primary">Salvar</button>
-
-</div>
+</form>
