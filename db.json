@@ -18,24 +18,24 @@
   },
   "empregados": [
     {
-      "primeiroNome": "Hugo",
-      "sobrenome": "Gomes",
-      "email": "hugomes@email.com",
-      "nascimento": "1999-04-28T03:00:00.000Z",
-      "genero": "",
-      "escolaridade": "Superior incompleto",
-      "formacao": "Analise",
-      "id": 1
-    },
-    {
       "primeiroNome": "Leilane",
       "sobrenome": "Monteiro",
-      "email": "mont@email.com",
+      "email": "monte@email.com",
       "nascimento": "1998-12-28T03:00:00.000Z",
       "genero": "mulher",
       "escolaridade": "Superior completo",
       "formacao": "Eng. Software",
       "id": 2
+    },
+    {
+      "primeiroNome": "Hugo",
+      "sobrenome": "Gomes",
+      "email": "hugomes@email.com",
+      "nascimento": "1999-04-28T03:00:00.000Z",
+      "genero": "outros",
+      "escolaridade": "Superior incompleto",
+      "formacao": "Analise",
+      "id": 3
     }
   ]
 }
