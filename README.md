@@ -14,7 +14,7 @@ Certifique-se de ter o seguinte instalado antes de prosseguir:
 
 1. Instalar Dependências do Projeto:
 
-   `cd crud-angular-multicamadas`
+   `cd angular-crud-mult`
    `npm install`
 
 2. Iniciar o JsonServer para Dados Falsos:
