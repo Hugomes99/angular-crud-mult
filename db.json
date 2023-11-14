@@ -18,16 +18,6 @@
   },
   "empregados": [
     {
-      "primeiroNome": "Leilane",
-      "sobrenome": "Monteiro",
-      "email": "monte@email.com",
-      "nascimento": "1998-12-28T03:00:00.000Z",
-      "genero": "mulher",
-      "escolaridade": "Superior completo",
-      "formacao": "Eng. Software",
-      "id": 2
-    },
-    {
       "primeiroNome": "Hugo",
       "sobrenome": "Gomes",
       "email": "hugomes@email.com",

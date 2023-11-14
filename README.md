@@ -6,22 +6,40 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# CRUD em Angular para Atividade de Multicamadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Este é um projeto de CRUD em Angular desenvolvido para uma atividade de multicamadas. O tutorial a seguir fornecerá instruções para inicializar o projeto utilizando Angular versão 15.0.1 e JsonServer.
 
-## Build
+## Requisitos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Certifique-se de ter o seguinte instalado antes de prosseguir:
 
-## Running unit tests
+- [Node.js](https://nodejs.org/) - Node.js e npm (Node Package Manager)
+- [Angular CLI](https://angular.io/cli) - Ferramenta de Linha de Comando Angular
+- [JsonServer](https://www.npmjs.com/package/json-server) - Simula um servidor RESTful com dados em formato JSON
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instruções de Inicialização
 
-## Running end-to-end tests
+1. Instalar Dependências do Projeto:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+cd crud-angular-multicamadas
+npm install
 
-## Further help
+2. Iniciar o JsonServer para Dados Falsos:
+   json-server --watch db.json
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Iniciar o Servidor de Desenvolvimento Angular:
+   ng serve
+
+4. Acessar o Aplicativo:
+   Abra o navegador e vá para http://localhost:4200/. O aplicativo estará rodando localmente.
+
+Certifique-se de ter o JsonServer em execução antes de iniciar o servidor Angular para garantir que os dados estejam disponíveis.
+
+## Contribuições
+
+Se você deseja contribuir para este projeto, sinta-se à vontade para enviar pull requests. Se encontrar problemas ou tiver sugestões, abra uma issue.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
