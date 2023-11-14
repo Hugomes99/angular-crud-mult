@@ -1,14 +1,6 @@
-# AngularCrudMult
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
 # CRUD em Angular para Atividade de Multicamadas
 
-Este é um projeto de CRUD em Angular desenvolvido para uma atividade de multicamadas. O tutorial a seguir fornecerá instruções para inicializar o projeto utilizando Angular versão 15.0.1 e JsonServer.
+Este é um projeto de CRUD em Angular desenvolvido para uma atividade de multicamadas. O tutorial a seguir fornecerá instruções para inicializar o projeto utilizando [Angular CLI](https://github.com/angular/angular-cli) version 15.1.0 e JsonServer.
 
 ## Requisitos
 
@@ -22,17 +14,17 @@ Certifique-se de ter o seguinte instalado antes de prosseguir:
 
 1. Instalar Dependências do Projeto:
 
-cd crud-angular-multicamadas
-npm install
+   `cd crud-angular-multicamadas`
+   `npm install`
 
 2. Iniciar o JsonServer para Dados Falsos:
-   json-server --watch db.json
+   `json-server --watch db.json`
 
 3. Iniciar o Servidor de Desenvolvimento Angular:
-   ng serve
+   `ng serve`
 
 4. Acessar o Aplicativo:
-   Abra o navegador e vá para http://localhost:4200/. O aplicativo estará rodando localmente.
+   Abra o navegador e vá para `http://localhost:4200/`. O aplicativo estará rodando localmente.
 
 Certifique-se de ter o JsonServer em execução antes de iniciar o servidor Angular para garantir que os dados estejam disponíveis.
 
