@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { EmpregadoService } from '../services/empregado.service';
-import { DialogRef } from '@angular/cdk/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-funci-add-edit',
@@ -23,7 +23,7 @@ export class FunciAddEditComponent {
 
   constructor(private _fb: FormBuilder,
     private _empService: EmpregadoService,
-    private _dialogRef: DialogRef<FunciAddEditComponent>) {
+    private _dialogRef: MatDialogRef<FunciAddEditComponent>) {
     this.empForm = this._fb.group({
       primeiroNome: '',
       sobrenome: '',
@@ -40,7 +40,7 @@ export class FunciAddEditComponent {
       this._empService.addEmpregado(this.empForm.value).subscribe({
         next: (val: any) => {
           alert('Empregado adicionado com sucesso!');
-          this._dialogRef.close();
+          this._dialogRef.close(true);
         },
         error: (err: any) => {
           console.error(err)

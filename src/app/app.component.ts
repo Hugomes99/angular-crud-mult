@@ -39,7 +39,14 @@ export class AppComponent implements OnInit {
   }
 
   openAddEditFunciForm() {
-    this._dialog.open(FunciAddEditComponent);
+    const dialogRef = this._dialog.open(FunciAddEditComponent);
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if (val) {
+          this.getEmpregadoList();
+        }
+      },
+    })
   }
 
   getEmpregadoList() {
@@ -60,6 +67,16 @@ export class AppComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  deleteEmpregado(id: number) {
+    this._empService.deleteEmpregado(id).subscribe({
+      next: (res) => {
+        alert("Empregado deletado!");
+        this.getEmpregadoList();
+      },
+      error: console.log,
+    })
   }
 
 }

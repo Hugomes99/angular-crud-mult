@@ -8,8 +8,8 @@
 
 <div class="main-body">
   <mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+    <mat-label>Filtro</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Fulano" #input>
   </mat-form-field>
 
   <div class="table-container">
@@ -70,7 +70,7 @@
           <button mat-icon-button color="primary">
             <mat-icon>edit</mat-icon>
           </button>
-          <button mat-icon-button color="warn">
+          <button mat-icon-button color="warn" (click)="deleteEmpregado(row.id)">
             <mat-icon>delete</mat-icon>
           </button>
         </td>
