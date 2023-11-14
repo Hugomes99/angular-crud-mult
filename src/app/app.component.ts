@@ -5,6 +5,7 @@ import { EmpregadoService } from './services/empregado.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { CoreService } from './core/core.service';
 
 @Component({
   selector: 'app-root',
@@ -30,8 +31,10 @@ export class AppComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
 
-  constructor(private _dialog: MatDialog,
-    private _empService: EmpregadoService
+  constructor(
+    private _dialog: MatDialog,
+    private _empService: EmpregadoService,
+    private _coreService: CoreService
   ) { }
 
   ngOnInit(): void {
@@ -72,7 +75,7 @@ export class AppComponent implements OnInit {
   deleteEmpregado(id: number) {
     this._empService.deleteEmpregado(id).subscribe({
       next: (res) => {
-        alert("Empregado deletado!");
+        this._coreService.openSnackBar('Empregado deletado!', 'OK');
         this.getEmpregadoList();
       },
       error: console.log,

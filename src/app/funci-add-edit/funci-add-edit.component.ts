@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { EmpregadoService } from '../services/empregado.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CoreService } from '../core/core.service';
 
 @Component({
   selector: 'app-funci-add-edit',
@@ -24,7 +25,8 @@ export class FunciAddEditComponent implements OnInit {
   constructor(private _fb: FormBuilder,
     private _empService: EmpregadoService,
     private _dialogRef: MatDialogRef<FunciAddEditComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
       primeiroNome: '',
@@ -48,7 +50,7 @@ export class FunciAddEditComponent implements OnInit {
           .updateEmpregado(this.data.id, this.empForm.value)
           .subscribe({
             next: (val: any) => {
-              alert('Informação do empregado atualizada!');
+              this._coreService.openSnackBar('Informação do empregado atualizada!');
               this._dialogRef.close(true);
             },
             error: (err: any) => {
@@ -59,7 +61,7 @@ export class FunciAddEditComponent implements OnInit {
       } else {
         this._empService.addEmpregado(this.empForm.value).subscribe({
           next: (val: any) => {
-            alert('Empregado adicionado com sucesso!');
+            this._coreService.openSnackBar('Empregado adicionado com sucesso!');
             this._dialogRef.close(true);
           },
           error: (err: any) => {
@@ -67,8 +69,6 @@ export class FunciAddEditComponent implements OnInit {
           }
         });
       }
-
     }
-
   }
 }
