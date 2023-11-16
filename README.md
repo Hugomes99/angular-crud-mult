@@ -14,16 +14,31 @@ Certifique-se de ter o seguinte instalado antes de prosseguir:
 
 1. Instalar Dependências do Projeto:
 
-   `cd angular-crud-mult`
-   `npm install`
+   ```
+   npm install
+   ```
 
-2. Iniciar o JsonServer para Dados Falsos:
-   `json-server --watch db.json`
+2. Instalar o Angular CLI de forma global:
 
-3. Iniciar o Servidor de Desenvolvimento Angular:
-   `ng serve`
+   ```
+   npm install -g @angular/cli
+   ```
 
-4. Acessar o Aplicativo:
+3. Iniciar o JsonServer para Dados Falsos:
+
+   ```
+   npm install -g json-server
+
+   json-server --watch db.json`
+   ```
+
+4. Iniciar o Servidor de Desenvolvimento Angular:
+
+   ```
+   ng serve
+   ```
+
+5. Acessar o Aplicativo:
    Abra o navegador e vá para `http://localhost:4200/`. O aplicativo estará rodando localmente.
 
 Certifique-se de ter o JsonServer em execução antes de iniciar o servidor Angular para garantir que os dados estejam disponíveis.
@@ -31,7 +46,3 @@ Certifique-se de ter o JsonServer em execução antes de iniciar o servidor Angu
 ## Contribuições
 
 Se você deseja contribuir para este projeto, sinta-se à vontade para enviar pull requests. Se encontrar problemas ou tiver sugestões, abra uma issue.
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
