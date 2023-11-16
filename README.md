@@ -39,6 +39,7 @@ Certifique-se de ter o seguinte instalado antes de prosseguir:
    ```
 
 5. Acessar o Aplicativo:
+
    Abra o navegador e vá para `http://localhost:4200/`. O aplicativo estará rodando localmente.
 
 Certifique-se de ter o JsonServer em execução antes de iniciar o servidor Angular para garantir que os dados estejam disponíveis.
