@@ -28,8 +28,10 @@ Certifique-se de ter o seguinte instalado antes de prosseguir:
 
    ```
    npm install -g json-server
+   ```
 
-   json-server --watch db.json`
+   ```
+   json-server --watch db.json
    ```
 
 4. Iniciar o Servidor de Desenvolvimento Angular:
